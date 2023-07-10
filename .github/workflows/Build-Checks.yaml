@@ -1,0 +1,29 @@
+name: Checks
+
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  Ubuntu-Build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Perms
+      run: chmod u+x comp.sh
+    - name: Build
+      run: ./comp.sh -c
+
+  Windows-Build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build
+      run: ./comp.bat -c
+

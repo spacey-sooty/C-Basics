@@ -6,7 +6,7 @@ while getopts "crhi" flag; do
    gcc -o /target/main.exe src/Main.c
    ;;
    r) # Handle the -r
-   gcc -o /target/main.exe src/Main.c
+   gcc -o target/main.exe src/Main.c
    chmod u+rx target/Main.exe
    ./target/Main.exe
    ;;

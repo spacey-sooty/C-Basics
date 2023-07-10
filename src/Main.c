@@ -5,7 +5,7 @@ int main() {
 	int lol;
 
 	printf("Hello World!");
-	scanf("%d", lol);
+	scanf("%d", *lol);
 	return 0;
 }
 

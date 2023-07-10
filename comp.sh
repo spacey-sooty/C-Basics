@@ -3,7 +3,7 @@ echo Starting to Compile
 while getopts "crhi" flag; do
  case $flag in
    c) # Handle the -c flag
-   gcc -o /target/main.exe src/Main.c
+   gcc -o target/main.exe src/Main.c
    ;;
    r) # Handle the -r
    gcc -o target/main.exe src/Main.c

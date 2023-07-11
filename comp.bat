@@ -16,12 +16,13 @@ echo starting to compile
  )
  if /I "%1" == "-c" (
   echo -c called
-  gcc -o target\main.exe src\main.c
+  gcc -o target\main.exe src\c\main.c
  )
  if /I "%1" == "-r" (
   echo -r called
-  gcc -o target\main.exe src\main.c
+  gcc -o target\main.exe src\c\main.c
   start target\main.exe
   .\target\main.exe
  )
+echo call ./comp -h for help
  shift

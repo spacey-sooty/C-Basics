@@ -13,6 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - run: mkdir target
     - name: Build
       run: make
 
@@ -22,6 +23,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - run: mkdir target
     - name: Build
       run: make
 

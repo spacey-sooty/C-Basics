@@ -5,12 +5,13 @@ int main(int argc, char **argv) {
   while (option != 5) {
     printMenu();
     int num_received = scanf("%d", &option);
+    int data;
     if (num_received == 1 && option > 0 && option <=5) {
       switch (option) {
         case 1:
           printf("What data should I insert?:\n");
-          scanf("%d", &option);
-          Node *new = addNode(option);
+          scanf("%d", &data);
+          Node *new = addNode(data);
           // add operation
           break;
         case 2:

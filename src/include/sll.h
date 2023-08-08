@@ -8,15 +8,47 @@ typedef struct {
 
 Node *head = NULL;
 
-// add a node to the list
-Node *addNode(int data)
+void printMenu() {
+  printf("Options:\n");
+  printf("\t1. Add a node to the list.\n");
+  printf("\t2. Remove a node from the list.\n");
+  printf("\t3. Insert data to a node.\n");
+  printf("\t4. Print the list.\n");
+  printf("\t5. Quit.\n");
+}
 
-// remove a node from the list
 
-// insert data to a node
+void printList() {
+  Node *current = head;
+  while (current != NULL) {
+    printf("%d->\n", current->data);
+    current = current->next;
+  }
+}
 
-// print the list
+Node *addNode(int data) {
+  Node *new = NULL;
+  // two cases
 
-void printList();
+  // empty list
+  if (head == NULL) {
+    // new = malloc(sizeof(Node));
+    if (new == NULL) {
+      return NULL;
+    }
+    new->data = data;
+    head = new;
+    new->next = NULL;
+  }/* non empty list */ else {
+    // new malloc(sizeof(Node));
+    if (new == NULL) {
+      return NULL;
+    }
+    new->data = data;
+    new->next = head;
+    head = new;
+  }
 
-void printMenu();
+  return new;
+}
+

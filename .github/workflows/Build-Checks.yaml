@@ -13,12 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Perms
-      run: chmod u+x comp.sh
-    - name: Init
-      run: ./comp.sh -i
     - name: Build
-      run: ./comp.sh -c
+      run: make
 
   Windows-Build:
 
@@ -27,5 +23,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: ./comp.bat -c
+      run: make
 

@@ -1,11 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "Main.h"
 
 int main() {
-	int lol;
-
-	printf("Hello World!");
-	scanf("%d", &lol);
-	return 0;
+  return 0;
 }
 
